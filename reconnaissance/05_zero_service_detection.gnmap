@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Tue Sep 29 04:32:27 2026 as: /usr/lib/nmap/nmap --privileged -sT -sV -T3 -Pn -p 80,443,8080 --script http-title,http-server-header,http-headers,ssl-cert,ssl-enum-ciphers -oA reconnaissance/05_zero_service_detection zero.webappsecurity.com
+Host: 54.82.22.214 (ec2-54-82-22-214.compute-1.amazonaws.com)	Status: Up
+Host: 54.82.22.214 (ec2-54-82-22-214.compute-1.amazonaws.com)	Ports: 80/open/tcp//http//Apache Tomcat|Coyote JSP engine 1.1/, 443/open/tcp//ssl|http//Apache httpd 2.2.6 ((Win32) mod_ssl|2.2.6 OpenSSL|0.9.8e mod_jk|1.2.40)/, 8080/open/tcp//http//Apache Tomcat|Coyote JSP engine 1.1/
+# Nmap done at Tue Sep 29 04:33:06 2026 -- 1 IP address (1 host up) scanned in 39.02 seconds

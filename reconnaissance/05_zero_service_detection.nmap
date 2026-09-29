@@ -1,0 +1,125 @@
+# Nmap 7.95 scan initiated Tue Sep 29 04:32:27 2026 as: /usr/lib/nmap/nmap --privileged -sT -sV -T3 -Pn -p 80,443,8080 --script http-title,http-server-header,http-headers,ssl-cert,ssl-enum-ciphers -oA reconnaissance/05_zero_service_detection zero.webappsecurity.com
+Nmap scan report for zero.webappsecurity.com (54.82.22.214)
+Host is up (0.29s latency).
+Other addresses for zero.webappsecurity.com (not scanned): 64:ff9b::3652:16d6
+rDNS record for 54.82.22.214: ec2-54-82-22-214.compute-1.amazonaws.com
+
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache Tomcat/Coyote JSP engine 1.1
+| http-headers: 
+|   Date: Tue, 29 Sep 2026 08:32:54 GMT
+|   Server: Apache-Coyote/1.1
+|   Access-Control-Allow-Origin: *
+|   Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+|   Content-Type: text/html;charset=UTF-8
+|   Content-Language: en-US
+|   Content-Length: 12471
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-title: Zero - Personal Banking - Loans - Credit Cards
+|_http-server-header: Apache-Coyote/1.1
+443/tcp  open  ssl/http Apache httpd 2.2.6 ((Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40)
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=zero.webappsecurity.com/organizationName=Micro Focus LLC/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:zero.webappsecurity.com
+| Issuer: commonName=DigiCert TLS RSA SHA256 2020 CA1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-04-26T00:00:00
+| Not valid after:  2022-05-04T23:59:59
+| MD5:   a3c7:6d49:e492:0890:859a:d111:889e:5d53
+|_SHA-1: 38b7:1430:838e:0e8e:7d92:44a3:4610:5640:1ec8:ad0d
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA (dh 512) - E
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA (rsa 64) - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 (rsa 64) - E
+|       TLS_RSA_EXPORT_WITH_RC4_40_MD5 (rsa 64) - E
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_DES_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|     compressors: 
+|       DEFLATE
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|       Export key exchange
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (rsa 64) of lower strength than certificate key
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA (dh 512) - E
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA (rsa 64) - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 (rsa 64) - E
+|       TLS_RSA_EXPORT_WITH_RC4_40_MD5 (rsa 64) - E
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_DES_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|     compressors: 
+|       DEFLATE
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Export key exchange
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (rsa 64) of lower strength than certificate key
+|_  least strength: E
+| http-headers: 
+|   Date: Tue, 29 Sep 2026 08:32:56 GMT
+|   Server: Apache/2.2.6 (Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40
+|   Access-Control-Allow-Origin: *
+|   Last-Modified: Sat, 20 Nov 2004 14:16:24 GMT
+|   ETag: "24c22-2c-44adde00"
+|   Accept-Ranges: bytes
+|   Content-Length: 44
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-server-header: Apache/2.2.6 (Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40
+8080/tcp open  http     Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+| http-headers: 
+|   Server: Apache-Coyote/1.1
+|   Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+|   Content-Type: text/html;charset=UTF-8
+|   Content-Language: en-US
+|   Content-Length: 12471
+|   Date: Tue, 29 Sep 2026 08:32:54 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-title: Zero - Personal Banking - Loans - Credit Cards
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 29 04:33:06 2026 -- 1 IP address (1 host up) scanned in 39.02 seconds

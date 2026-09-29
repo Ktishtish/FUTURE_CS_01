@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Tue Sep 29 04:32:27 2026 as: /usr/lib/nmap/nmap -&#45;privileged -sT -sV -T3 -Pn -p 80,443,8080 -&#45;script http-title,http-server-header,http-headers,ssl-cert,ssl-enum-ciphers -oA reconnaissance/05_zero_service_detection zero.webappsecurity.com -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sT -sV -T3 -Pn -p 80,443,8080 -&#45;script http-title,http-server-header,http-headers,ssl-cert,ssl-enum-ciphers -oA reconnaissance/05_zero_service_detection zero.webappsecurity.com" start="1790670747" startstr="Tue Sep 29 04:32:27 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="80,443,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1790670748" endtime="1790670786"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="54.82.22.214" addrtype="ipv4"/>
+<hostnames>
+<hostname name="zero.webappsecurity.com" type="user"/>
+<hostname name="ec2-54-82-22-214.compute-1.amazonaws.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-headers" output="&#xa;  Date: Tue, 29 Sep 2026 08:32:54 GMT&#xa;  Server: Apache-Coyote/1.1&#xa;  Access-Control-Allow-Origin: *&#xa;  Cache-Control: no-cache, max-age=0, must-revalidate, no-store&#xa;  Content-Type: text/html;charset=UTF-8&#xa;  Content-Language: en-US&#xa;  Content-Length: 12471&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-title" output="Zero - Personal Banking - Loans - Credit Cards"><elem key="title">Zero - Personal Banking - Loans - Credit Cards</elem>
+</script><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.2.6" extrainfo="(Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.6</cpe></service><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=zero.webappsecurity.com/organizationName=Micro Focus LLC/stateOrProvinceName=California/countryName=US&#xa;Subject Alternative Name: DNS:zero.webappsecurity.com&#xa;Issuer: commonName=DigiCert TLS RSA SHA256 2020 CA1/organizationName=DigiCert Inc/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-04-26T00:00:00&#xa;Not valid after:  2022-05-04T23:59:59&#xa;MD5:   a3c7:6d49:e492:0890:859a:d111:889e:5d53&#xa;SHA-1: 38b7:1430:838e:0e8e:7d92:44a3:4610:5640:1ec8:ad0d"><table key="subject">
+<elem key="commonName">zero.webappsecurity.com</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName">Santa Clara</elem>
+<elem key="organizationName">Micro Focus LLC</elem>
+<elem key="stateOrProvinceName">California</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">DigiCert TLS RSA SHA256 2020 CA1</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">DigiCert Inc</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D22A8DD92FD607F19D925D025DD39A4363F15F5189760C5AF78BDBB2EA1533CF54D0A69C8EC5621035E75695DE79339DB3F9C581E6766705D063CB244D6B97CA6C9CC686F963BAEAA3A11F29AF3988E05B92F3517FF51FA6C3294EBEFBAFE5B683F036F3CE1FBCDA7F75D98DA1927BC4B01BFCD2966E1ED28BDFBED2600261B5619A24AEB04D208BCC8DEF883B296C48B948D1CDE22166EFBE23739D3D8BB88921E4E9ECDE2021F8744DC9953F8613C679C20CEA843DB43EF19A3ED1E08F8D8B724A8A7C295039B57D6252D027C1678C88A13503F3B0C15FFF552EF3E668190BA0551DBDC256013A2B997145C93E13CFC77B9E6178EA67AB22DA6652D55CAFF1</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">B7:6B:A2:EA:A8:AA:84:8C:79:EA:B4:DA:0F:98:B2:C5:95:76:B9:F4</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">22:84:D7:DF:B4:E3:2B:23:74:17:E6:4D:12:07:DE:10:34:00:1E:3F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:zero.webappsecurity.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://crl3.digicert.com/DigiCertTLSRSASHA2562020CA1.crl&#xa;&#xa;Full Name:&#xa;  URI:http://crl4.digicert.com/DigiCertTLSRSASHA2562020CA1.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.2&#xa;  CPS: http://www.digicert.com/CPS</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.digicert.com&#xa;CA Issuers - URI:http://cacerts.digicert.com/DigiCertTLSRSASHA2562020CA1.crt</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 29:79:BE:F0:9E:39:39:21:F0:56:73:9F:63:A5:77:E5:&#xa;                BE:57:7D:9C:60:0A:F8:F9:4D:5D:26:5C:25:5D:C7:84&#xa;    Timestamp : Apr 26 19:06:32.083 2021 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:61:37:0A:A2:62:DB:2C:99:94:9D:9F:F1:&#xa;                E4:50:E7:A8:E6:A1:AB:F5:AC:1D:21:0F:83:C3:25:5A:&#xa;                C8:7F:F7:9B:02:21:00:9A:7D:4E:89:8C:FD:12:D6:B2:&#xa;                78:D2:FA:FE:CA:94:E2:58:C9:22:D5:91:3B:C9:66:10:&#xa;                F9:90:96:C5:5F:81:13&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 22:45:45:07:59:55:24:56:96:3F:A1:2F:F1:F7:6D:86:&#xa;                E0:23:26:63:AD:C0:4B:7F:5D:C6:83:5C:6E:E2:0F:02&#xa;    Timestamp : Apr 26 19:06:32.079 2021 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:73:D7:C3:33:54:1C:52:20:DA:B3:2D:85:&#xa;                FA:96:27:53:1D:D2:DB:7F:88:3E:40:7D:14:A4:73:8C:&#xa;                90:2D:6E:1A:02:21:00:F5:C3:73:93:36:28:F3:EA:6A:&#xa;                44:D0:41:AE:5D:6F:FB:05:13:AD:82:B9:02:F3:5A:C4:&#xa;                50:FE:C5:E4:46:BC:7A&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 51:A3:B0:F5:FD:01:79:9C:56:6D:B8:37:78:8F:0C:A4:&#xa;                7A:CC:1B:27:CB:F7:9E:88:42:9A:0D:FE:D4:8B:05:E5&#xa;    Timestamp : Apr 26 19:06:32.669 2021 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:4E:7F:52:F1:D2:2F:87:FC:52:63:AE:13:&#xa;                D9:63:FA:9F:4D:61:19:2B:9E:C0:6F:E6:01:53:07:10:&#xa;                61:A0:94:C1:02:20:48:E9:3F:54:9C:F7:81:8F:CE:6B:&#xa;                B9:34:59:60:90:00:E1:52:7D:6A:BD:2A:D5:8B:9F:76:&#xa;                59:D2:10:F2:EB:64</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-26T00:00:00</elem>
+<elem key="notAfter">2022-05-04T23:59:59</elem>
+</table>
+<elem key="md5">a3c76d49e4920890859ad111889e5d53</elem>
+<elem key="sha1">38b71430838e0e8e7d9244a3461056401ec8ad0d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIGwjCCBaqgAwIBAgIQBLY/b0QBusXwiex6/ApShzANBgkqhkiG9w0BAQsFADBP&#xa;MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMSkwJwYDVQQDEyBE&#xa;aWdpQ2VydCBUTFMgUlNBIFNIQTI1NiAyMDIwIENBMTAeFw0yMTA0MjYwMDAwMDBa&#xa;Fw0yMjA1MDQyMzU5NTlaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9y&#xa;bmlhMRQwEgYDVQQHEwtTYW50YSBDbGFyYTEYMBYGA1UEChMPTWljcm8gRm9jdXMg&#xa;TExDMSAwHgYDVQQDExd6ZXJvLndlYmFwcHNlY3VyaXR5LmNvbTCCASIwDQYJKoZI&#xa;hvcNAQEBBQADggEPADCCAQoCggEBANIqjdkv1gfxnZJdAl3TmkNj8V9RiXYMWveL&#xa;27LqFTPPVNCmnI7FYhA151aV3nkznbP5xYHmdmcF0GPLJE1rl8psnMaG+WO66qOh&#xa;HymvOYjgW5LzUX/1H6bDKU6++6/ltoPwNvPOH7zaf3XZjaGSe8SwG/zSlm4e0ovf&#xa;vtJgAmG1YZokrrBNIIvMje+IOylsSLlI0c3iIWbvviNznT2LuIkh5Ons3iAh+HRN&#xa;yZU/hhPGecIM6oQ9tD7xmj7R4I+Ni3JKinwpUDm1fWJS0CfBZ4yIoTUD87DBX/9V&#xa;LvPmaBkLoFUdvcJWATormXFFyT4Tz8d7nmF46merItpmUtVcr/ECAwEAAaOCA3Mw&#xa;ggNvMB8GA1UdIwQYMBaAFLdrouqoqoSMeeq02g+YssWVdrn0MB0GA1UdDgQWBBQi&#xa;hNfftOMrI3QX5k0SB94QNAAePzAiBgNVHREEGzAZghd6ZXJvLndlYmFwcHNlY3Vy&#xa;aXR5LmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsG&#xa;AQUFBwMCMIGLBgNVHR8EgYMwgYAwPqA8oDqGOGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0&#xa;LmNvbS9EaWdpQ2VydFRMU1JTQVNIQTI1NjIwMjBDQTEuY3JsMD6gPKA6hjhodHRw&#xa;Oi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRUTFNSU0FTSEEyNTYyMDIwQ0Ex&#xa;LmNybDA+BgNVHSAENzA1MDMGBmeBDAECAjApMCcGCCsGAQUFBwIBFhtodHRwOi8v&#xa;d3d3LmRpZ2ljZXJ0LmNvbS9DUFMwfQYIKwYBBQUHAQEEcTBvMCQGCCsGAQUFBzAB&#xa;hhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRwYIKwYBBQUHMAKGO2h0dHA6Ly9j&#xa;YWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFRMU1JTQVNIQTI1NjIwMjBDQTEu&#xa;Y3J0MAwGA1UdEwEB/wQCMAAwggF9BgorBgEEAdZ5AgQCBIIBbQSCAWkBZwB2ACl5&#xa;vvCeOTkh8FZzn2Old+W+V32cYAr4+U1dJlwlXceEAAABeQ+TcxMAAAQDAEcwRQIg&#xa;YTcKomLbLJmUnZ/x5FDnqOahq/WsHSEPg8MlWsh/95sCIQCafU6JjP0S1rJ40vr+&#xa;ypTiWMki1ZE7yWYQ+ZCWxV+BEwB2ACJFRQdZVSRWlj+hL/H3bYbgIyZjrcBLf13G&#xa;g1xu4g8CAAABeQ+Tcw8AAAQDAEcwRQIgc9fDM1QcUiDasy2F+pYnUx3S23+IPkB9&#xa;FKRzjJAtbhoCIQD1w3OTNijz6mpE0EGuXW/7BROtgrkC81rEUP7F5Ea8egB1AFGj&#xa;sPX9AXmcVm24N3iPDKR6zBsny/eeiEKaDf7UiwXlAAABeQ+TdV0AAAQDAEYwRAIg&#xa;Tn9S8dIvh/xSY64T2WP6n01hGSuewG/mAVMHEGGglMECIEjpP1Sc94GPzmu5NFlg&#xa;kADhUn1qvSrVi592WdIQ8utkMA0GCSqGSIb3DQEBCwUAA4IBAQBq0ohx+0ovTijg&#xa;ZWVu/UNNj8KFLx6e54ejcFg3QQwStVPKKqOClMDZetMeEYcbWV3U991S4y1dNZo/&#xa;bCVWLRu6VfQVQc1pnmSxzDUt6qJ7BhGWAEXqxHESej+NaQBXyYUYJZ7oiEt0fZ7s&#xa;oij5gQfNRoa0z3boecTe1qiwGq6te1PjBsOM2ra0p8LYdkGES2z9CvGNVhufWr7Z&#xa;Ok3cgw1+Ixjpk9pM3qcaPjy6iVbojO6mwq++R9qutLKH15UQG3+XMS7477PBETgS&#xa;4CFD+Y8T8oTW+aoa9KsXMvMIPq+QVO+GVfoWue+/mOI3f2ZN2VvuqtQuZ5As4+p9&#xa;HVT0aYx9&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA (dh 512) - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA (rsa 64) - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 (rsa 64) - E&#xa;      TLS_RSA_EXPORT_WITH_RC4_40_MD5 (rsa 64) - E&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_DES_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      DEFLATE&#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Export key exchange&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;      Key exchange (rsa 64) of lower strength than certificate key&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA (dh 512) - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA (rsa 64) - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 (rsa 64) - E&#xa;      TLS_RSA_EXPORT_WITH_RC4_40_MD5 (rsa 64) - E&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_DES_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      DEFLATE&#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Export key exchange&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;      Key exchange (rsa 64) of lower strength than certificate key&#xa;  least strength: E"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="kex_info">dh 512</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC4_40_MD5</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>DEFLATE</elem>
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Export key exchange</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+<elem>Key exchange (rsa 64) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="kex_info">dh 512</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC4_40_MD5</elem>
+<elem key="kex_info">rsa 64</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>DEFLATE</elem>
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Export key exchange</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+<elem>Key exchange (rsa 64) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">E</elem>
+</script><script id="http-headers" output="&#xa;  Date: Tue, 29 Sep 2026 08:32:56 GMT&#xa;  Server: Apache/2.2.6 (Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40&#xa;  Access-Control-Allow-Origin: *&#xa;  Last-Modified: Sat, 20 Nov 2004 14:16:24 GMT&#xa;  ETag: &quot;24c22-2c-44adde00&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 44&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-server-header" output="Apache/2.2.6 (Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40"><elem>Apache/2.2.6 (Win32) mod_ssl/2.2.6 OpenSSL/0.9.8e mod_jk/1.2.40</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script><script id="http-headers" output="&#xa;  Server: Apache-Coyote/1.1&#xa;  Cache-Control: no-cache, max-age=0, must-revalidate, no-store&#xa;  Content-Type: text/html;charset=UTF-8&#xa;  Content-Language: en-US&#xa;  Content-Length: 12471&#xa;  Date: Tue, 29 Sep 2026 08:32:54 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-title" output="Zero - Personal Banking - Loans - Credit Cards"><elem key="title">Zero - Personal Banking - Loans - Credit Cards</elem>
+</script></port>
+</ports>
+<times srtt="286872" rttvar="162261" to="935916"/>
+</host>
+<runstats><finished time="1790670786" timestr="Tue Sep 29 04:33:06 2026" summary="Nmap done at Tue Sep 29 04:33:06 2026; 1 IP address (1 host up) scanned in 39.02 seconds" elapsed="39.02" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
