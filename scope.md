@@ -4,9 +4,10 @@
 **Assessor:** KEZIAH TISHER
 **Assessment type:** Passive, non-intrusive external vulnerability assessment
 **Dates:** 26 September 2026 – 26 October 2026
+
 ## In scope
-- Target: http://testphp.vulnweb.com
-- Authorization: Publicly provided by Acunetix as an intentionally vulnerable test site
+- Target: http://zero.webappsecurity.com
+- Authorization: Publicly provided by OpenText (formerly Micro Focus) as an intentionally vulnerable demo banking application for security testing
 
 ## Permitted activities
 - Basic port and service discovery (Nmap, default timing)

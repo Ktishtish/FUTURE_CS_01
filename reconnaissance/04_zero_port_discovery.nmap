@@ -1,0 +1,12 @@
+# Nmap 7.95 scan initiated Tue Sep 29 04:26:27 2026 as: /usr/lib/nmap/nmap --privileged -sT -T3 -Pn --top-ports 1000 -oA reconnaissance/04_zero_port_discovery zero.webappsecurity.com
+Nmap scan report for zero.webappsecurity.com (54.82.22.214)
+Host is up (0.26s latency).
+Other addresses for zero.webappsecurity.com (not scanned): 64:ff9b::3652:16d6
+rDNS record for 54.82.22.214: ec2-54-82-22-214.compute-1.amazonaws.com
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+
+# Nmap done at Tue Sep 29 04:26:45 2026 -- 1 IP address (1 host up) scanned in 18.19 seconds

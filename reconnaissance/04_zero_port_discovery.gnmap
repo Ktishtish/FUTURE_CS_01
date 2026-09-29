@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Tue Sep 29 04:26:27 2026 as: /usr/lib/nmap/nmap --privileged -sT -T3 -Pn --top-ports 1000 -oA reconnaissance/04_zero_port_discovery zero.webappsecurity.com
+Host: 54.82.22.214 (ec2-54-82-22-214.compute-1.amazonaws.com)	Status: Up
+Host: 54.82.22.214 (ec2-54-82-22-214.compute-1.amazonaws.com)	Ports: 80/open/tcp//http///, 443/open/tcp//https///, 8080/open/tcp//http-proxy///	Ignored State: filtered (997)
+# Nmap done at Tue Sep 29 04:26:45 2026 -- 1 IP address (1 host up) scanned in 18.19 seconds

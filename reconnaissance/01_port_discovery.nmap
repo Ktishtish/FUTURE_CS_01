@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Tue Sep 29 04:08:38 2026 as: /usr/lib/nmap/nmap -sS -T3 -Pn --top-ports 1000 -oA reconnaissance/01_port_discovery testphp.vulnweb.com
+Nmap scan report for testphp.vulnweb.com (44.228.249.3)
+Host is up.
+Other addresses for testphp.vulnweb.com (not scanned): 64:ff9b::2ce4:f903
+rDNS record for 44.228.249.3: ec2-44-228-249-3.us-west-2.compute.amazonaws.com
+All 1000 scanned ports on testphp.vulnweb.com (44.228.249.3) are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+# Nmap done at Tue Sep 29 04:12:05 2026 -- 1 IP address (1 host up) scanned in 207.33 seconds
