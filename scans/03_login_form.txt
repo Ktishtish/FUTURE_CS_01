@@ -1,0 +1,3 @@
+        <form id="login_form" action="/signin.html" method="post" class="form-horizontal">
+
+            <div class="form-inputs">

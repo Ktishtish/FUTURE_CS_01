@@ -13,5 +13,8 @@
 | F-09 | Redundant public web port 8080 exposing the application | Nmap 04/05 | Medium |
 | F-10 | Detailed server/version banners disclosed (software, OS, modules) | Server headers | Low |
 | F-11 | Default web server page exposed on HTTPS | Nmap 443 headers (44 bytes, 2004 date) | Low |
-
+| F-12 | Login credentials submitted over unencrypted HTTP (form posts to /signin.html over http://); confirmed by browser warning | scans/03_login_form.txt; screenshots/08, 09 | High |
 **Positive observations:** Only 3 of 1,000 common ports exposed; anti-caching headers correctly set on application pages; 2048-bit RSA key with SHA-256 signature.
+**Additional positive observations:** Login form uses POST (credentials not exposed in URLs); no cookies set on public pages before login.
+
+**Limitations:** Session cookie attributes not assessed — cookies are issued post-authentication, which was out of scope.
